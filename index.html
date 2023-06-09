@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIN Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <img src="./images/green-wallpaper.jpeg" alt="green background">
+    <form>
+        <div class="container">
+            <p class="first-para">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br> Sign up <i>now</i> to get started.</p>
+
+            <p class="second-para">You <i>know</i> you want to.</p>
+        </div>
+        <div class="container-two">
+            <p class="third-para">Let's do this!</p>
+            <div class="input-one">
+                <div>
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div>
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+            </div>
+            <div class="input-one">
+                <div>
+                    <label for="userEmail">EMAIL</label>
+                    <input type="email" id="userEmail" name="userEmail" pattern="[Aa-Zz0-9.%+-]+@[Aa-Zz0-9.-]+\.[a-z]{2, }$" required>
+                </div>
+                <div>
+                    <label for="phoneNumber">PHONE NUMBER</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+            </div>
+            <div class="input-one">
+                <div>
+                    <label for="password1">PASSWORD</label>
+                    <input type="password" id="password1" name="userPassword" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+-={}|:;'<>,.?/]).{8,20}$" required> 
+                    <!-- for password using regex:
+                    at least one uppercase letter
+                    at least one lowercase letter
+                    at least one special character
+                    a minimum length of 8 characters
+                    a maximum length of 20 characters -->
+                </div>
+                <div>
+                    <label for="password2">CONFIRM PASSWORD</label>
+                    <input type="password" id="password2" name="passwordConfirmation" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+-={}|:;'<>,.?/]).{8,20}$" required>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button>Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </form>
+</body>
+</html>
